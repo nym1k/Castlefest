@@ -1,0 +1,23 @@
+.ft-Footer {
+  background-color: rgba(0,0,0,0.4);
+  @include spacer;
+}
+
+.ft-Footer_Inner {
+  @include inner;
+}
+
+.ft-Footer_Body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ft-Footer_Item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

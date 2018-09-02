@@ -1,0 +1,89 @@
+.sec-TicketCards {
+  width: 100%;
+}
+
+.sec-TicketCard_Items {
+  &::after {
+    content: 'flickity';
+    display: none;
+  }
+
+  @include breakpoint('lg') {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+
+    &::after {
+      content: '';
+    }
+  };
+}
+
+.sec-TicketCard_Item {
+  width: 100%;
+}
+
+.flickity-enabled {
+
+  &.car-Tickets {
+    padding-bottom: 30px;
+
+    @include breakpoint('sm') {
+      padding-bottom: 50px;
+    };
+
+    .flickity-page-dots {
+      bottom: 0;
+    }
+  }
+
+  .car-Tickets_Cell {
+    width: 100%;
+    margin-right: 15px;
+
+    @include breakpoint('custom-600') {
+      width: calc(50% - 25px);
+      margin-right: 50px;
+    };
+
+    @include breakpoint('md') {
+      width: calc(((100 / 3) * 1%) - ((100 / 3) * 1px);
+    };
+  }
+}
+
+.crd-TicketCard {
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.crd-TicketCard_Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crd-TicketCard_Title {
+  font-family: $font1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.crd-TicketCard_Price {
+  margin-bottom: 30px;
+}

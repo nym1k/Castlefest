@@ -1,0 +1,47 @@
+h1 {
+    font-size: em(40px);
+}
+
+h2 {
+    font-size: em(36px);
+}
+
+h3 {
+    font-size: em(24px);
+}
+
+h4 {
+    font-size: em(24px);
+}
+
+h5 {
+    font-size: em(20px);
+}
+
+h6 {
+    font-size: em(18px);
+}
+
+@mixin h1 {
+    @extend h1;
+}
+
+@mixin h2 {
+    @extend h2;
+}
+
+@mixin h3 {
+    @extend h3;
+}
+
+@mixin h4 {
+    @extend h4;
+}
+
+@mixin h5 {
+    @extend h5;
+}
+
+@mixin h6 {
+    @extend h6;
+}

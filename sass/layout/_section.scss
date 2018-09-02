@@ -1,0 +1,53 @@
+.sec-Section {
+  @include spacer;
+}
+
+.sec-Section-color {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.sec-Section_Inner {
+  @include inner;
+}
+
+.sec-Section_Description {
+  margin-top: 30px;
+}
+
+.sec-Section_Text {
+  margin-bottom: 10px;
+}
+
+.sec-Section_Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sec-Section_Title {
+  font-family: $font1;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sec-Section_Heading {
+  font-family: $font1;
+  @include h1;
+  padding: 50px;
+}
+
+.sec-Section_Link {
+  @include button;
+}
+
+.sec-Lineup {
+  max-width: 1024px;
+  margin: 30px auto;
+}
+
+.sec-Tickets {
+  text-align: center;
+}

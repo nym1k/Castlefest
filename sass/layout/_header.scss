@@ -1,0 +1,86 @@
+.hd-Header {
+  height: 50px;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0);
+  z-index: 10;
+  transition: background-color .3s ease;
+  @include breakpoint('sm') {
+    height: 80px;
+  };
+
+  @include inner;
+}
+
+.hd-Header-fill {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.hd-Header_Items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hd-Header_Item-mobile {
+  display: block;
+  @include breakpoint('sm') {
+    display: none;
+  };
+}
+
+.hd-Header_Item-nav {
+  display: none;
+  @include breakpoint('sm') {
+    display: block;
+  };
+}
+
+.hd-Menu_Button {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background-image: url('../img/menu.svg');
+  background-size: contain;
+}
+
+.hd-Logo_Text {
+  font-family: $font1;
+  position: relative;
+  font-size: 1.6em;
+  @include breakpoint('sm') {
+    font-size: 2.4em;
+  };
+
+  span {
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    font-size: 18px;
+    transform: rotate(90deg) translateX(-22%);
+    display: none;
+    @include breakpoint('sm') {
+      display: block;
+    }
+  }
+}
+
+.hd-Nav_Link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  letter-spacing: 2px;
+  font-family: $font1;
+
+  @include underline-animate(#fff, 3px, -8px);
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

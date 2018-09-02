@@ -1,0 +1,116 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == 'custom-350' {
+    @media only screen and (min-width: 350px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xs' {
+    @media only screen and (min-width: 451px) {
+      @content;
+    }
+  } @else if $breakpoint == 'custom-600' {
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == 'sm' {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media only screen and (min-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == 'custom-1000' {
+    @media only screen and (min-width: 1000px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xlg' {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xxlg' {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xxs-viewport' {
+    @media only screen and (max-width: 450px) {
+      @content;
+    }
+  } @else if $breakpoint == 'xs-viewport' {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg-viewport' {
+    @media only screen and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $breakpoint == 'sm-viewport' {
+    @media only screen and (min-width: 768px) and (max-width: 899px) {
+      @content;
+    }
+  } @else if $breakpoint == 'md-viewport' {
+    @media only screen and (min-width: 900px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg-viewport' {
+    @media only screen and (min-width: 1200px) and (max-width: 1439px) {
+      @content;
+    }
+  }
+}
+
+@mixin spacer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+    @include breakpoint('sm') {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    };
+}
+
+@mixin inner {
+  padding-left: 15px;
+  padding-right: 15px;
+
+    @include breakpoint('sm') {
+      padding-left: 50px;
+      padding-right: 50px;
+    };
+}
+
+@mixin button {
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-family: $font1;
+  letter-spacing: 2px;
+}
+
+@mixin underline-animate($color, $height, $spacing) {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 0;
+        bottom: $spacing;
+        background: $color;
+        height: $height;
+        transition: all 0.3s ease-out;
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+.car-HeroCarousel {
+  .flickity-page-dots {
+    @include breakpoint('sm') {
+      display: none;
+    };
+  }
+
+  .flickity-buttons {
+    display: none;
+    @include breakpoint('sm') {
+      display: block;
+    };
+  }
+}
+
+.car-HeroCarousel_Cell {
+  width: 100%;
+  display: flex;
+  position: relative;
+  // max-height: 800px;
+
+}
+
+.car-HeroCarousel_Image {
+  display: none;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @include breakpoint('md') {
+    display: block;
+  };
+}
+
+.car-HeroCarousel_Image-mobile {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  @include breakpoint('md') {
+    display: none;
+  };
+}
+
+.car-HeroCarousel_Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3)));
+}

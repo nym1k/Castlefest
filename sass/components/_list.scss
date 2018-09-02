@@ -1,0 +1,13 @@
+.lst-Nav_Items {
+  list-style: none;
+}
+
+.lst-Nav_Item {
+
+}
+
+
+.lst-Band_Items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
