@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'BEBAS';
-  src: url("{{ 'fonts/BEBAS.ttf' | asset_url }}") format('truetype');
+  src: url("{{ 'fonts/BEBAS.ttf' | asset_url }}") format('truetype'),
+    url('BEBAS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 h1 {
