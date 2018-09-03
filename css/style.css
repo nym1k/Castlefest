@@ -113,6 +113,10 @@ img {
   .flickity-page-dots .dot {
     background: #fff; }
 
+@font-face {
+  font-family: 'BEBAS';
+  src: url("{{ 'fonts/BEBAS.ttf' | asset_url }}") format("truetype"); }
+
 h1, .sec-Section_Heading {
   font-size: 2.5em; }
 
