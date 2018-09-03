@@ -189,11 +189,14 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 15px; }
+  @media only screen and (min-width: 768px) {
+    .crd-TicketCard_Content {
+      padding: 30px; } }
 
 .crd-TicketCard_Title {
   font-family: "BEBAS";
@@ -353,8 +356,8 @@ h6 {
 
 .ft-Footer {
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-top: 25px;
+  padding-bottom: 25px; }
   @media only screen and (min-width: 768px) {
     .ft-Footer {
       padding-top: 50px;
@@ -474,8 +477,8 @@ h6 {
   width: 100%; }
 
 .sec-Section {
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-top: 25px;
+  padding-bottom: 25px; }
   @media only screen and (min-width: 768px) {
     .sec-Section {
       padding-top: 50px;

@@ -70,11 +70,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
+  @include breakpoint('sm') {
+    padding: 30px;
+  };
 }
 
 .crd-TicketCard_Title {

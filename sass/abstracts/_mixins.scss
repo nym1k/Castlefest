@@ -63,8 +63,8 @@
 }
 
 @mixin spacer {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
     @include breakpoint('sm') {
       padding-top: 50px;
