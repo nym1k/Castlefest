@@ -1,13 +1,6 @@
 /*============================================================================
 # Functions
 ==============================================================================*/
-/*
-Dark #431E0E
-Orange #FC791D
-Pale Orange  #F0B861
-White
-Black #1B0A03
-*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -54,9 +47,14 @@ body {
   color: #fff;
   font-size: 16px;
   font-family: 'Nanum Gothic', sans-serif; }
+  body.drawer-main-menu-open .drawer .drawer__overlay {
+    opacity: 1;
+    visibility: visible; }
+  body.drawer-main-menu-open .drawer .drawer__inner--menu {
+    left: 0; }
 
 a {
-  color: currentColor; }
+  color: #E8C5E6; }
 
 .video {
   max-width: 100%;
@@ -193,18 +191,20 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  font-size: 25px; }
+  padding: 15px; }
   @media only screen and (min-width: 768px) {
     .crd-TicketCard_Content {
-      font-size: 16px;
       padding: 30px; } }
 
 .crd-TicketCard_Title {
   font-family: "BEBAS";
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 25px; }
+  @media only screen and (min-width: 768px) {
+    .crd-TicketCard_Title {
+      font-size: 16px; } }
 
 .crd-TicketCard_Price {
   margin-bottom: 30px; }
@@ -249,7 +249,45 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))); }
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); }
+  .car-HeroCarousel_Cell.flipped .car-HeroCarousel_Overlay {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%); }
+
+.car-HeroCarousel_Content {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 50px; }
+  @media only screen and (min-width: 900px) {
+    .car-HeroCarousel_Content {
+      width: 50%; } }
+  .car-HeroCarousel_Cell.flipped .car-HeroCarousel_Content {
+    left: 0;
+    right: auto; }
+
+.car-HeroCarousel_Title {
+  font-family: "BEBAS";
+  letter-spacing: 3px;
+  max-width: 400px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 40px; }
+  @media only screen and (min-width: 600px) {
+    .car-HeroCarousel_Title {
+      font-size: 40px;
+      line-height: 80px; } }
+  @media only screen and (min-width: 1440px) {
+    .car-HeroCarousel_Title {
+      font-size: 60px;
+      max-width: 550px; } }
 
 .car-InfoTiles::after {
   content: 'flickity';
@@ -356,6 +394,71 @@ h6 {
 .ft-Social_Icon {
   color: #fff; }
 
+.drawer {
+  z-index: 50; }
+  .drawer .drawer__inner {
+    height: 100%;
+    width: 400px;
+    max-width: 80%;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    display: flex; }
+    .drawer .drawer__inner::-webkit-scrollbar {
+      width: 2px;
+      border-bottom-right-radius: 3px; }
+    .drawer .drawer__inner::-webkit-scrollbar-track {
+      background-color: #131313;
+      border-radius: 2px; }
+    .drawer .drawer__inner::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 2px; }
+    .drawer .drawer__inner.drawer__inner--menu {
+      left: -500px;
+      background: #1b1b1b; }
+    .drawer .drawer__inner .drawer-cart-close {
+      width: 18px;
+      height: 18px;
+      line-height: 1em;
+      font-size: 0;
+      position: absolute;
+      top: 21px;
+      right: 30px;
+      transform: rotate(0deg);
+      transition: ease-in-out 0.3s;
+      cursor: pointer;
+      z-index: 5; }
+      .drawer .drawer__inner .drawer-cart-close:hover {
+        color: #a1a1a1; }
+      .drawer .drawer__inner .drawer-cart-close span {
+        width: 24px;
+        height: 2px;
+        position: absolute;
+        top: 12px;
+        left: -3px;
+        opacity: 1;
+        background: #fff;
+        transform: rotate(0deg);
+        transition: ease-in-out 0.3s ease; }
+        .drawer .drawer__inner .drawer-cart-close span.line-1 {
+          transform: rotate(45deg); }
+        .drawer .drawer__inner .drawer-cart-close span.line-2 {
+          transform: rotate(-45deg); }
+  .drawer .drawer__overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    transition: all 0.5s ease; }
+
 .ft-Footer {
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 25px;
@@ -382,6 +485,11 @@ h6 {
 .ft-Footer_Item {
   margin-bottom: 30px; }
   .ft-Footer_Item:last-child {
+    margin-bottom: 0; }
+
+.ft-Footer_Text {
+  margin-bottom: 15px; }
+  .ft-Footer_Text:last-child {
     margin-bottom: 0; }
 
 .hd-Header {
@@ -477,6 +585,27 @@ h6 {
 
 .her-Hero {
   width: 100%; }
+
+.mn-MobileNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0 50px; }
+
+.lst-MobileNav_Items {
+  list-style: none; }
+
+.lst-MobileNav_Item {
+  line-height: 40px;
+  font-size: 25px;
+  margin-bottom: 30px; }
+
+.mn-MobileNav_Link {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "BEBAS"; }
 
 .sec-Section {
   padding-top: 25px;

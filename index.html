@@ -18,10 +18,33 @@
    </head>
    <body>
 
+    <div class="drawer">
+      <div class="drawer__inner drawer__inner--menu">
+        <a href="#" class="drawer-cart-close">Close Menu<span class="line-1"></span><span class="line-2"></span></a>
+
+        <nav class="mn-MobileNav">
+          <ul class="lst-MobileNav_Items">
+            <li class="lst-MobileNav_Item">
+              <a href="#lineup" class="mn-MobileNav_Link">Lineup</a>
+            </li>
+            <li class="lst-MobileNav_Item">
+              <a href="#stages" class="mn-MobileNav_Link">Stages</a>
+            </li>
+            <li class="lst-MobileNav_Item">
+              <a href="#tickets" target="_blank" class="mn-MobileNav_Link">Tickets</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="drawer__overlay"></div>
+    </div>
+
     <header class="hd-Header">
       <div class="hd-Header_Items">
         <div class="hd-Header_Item hd-Header_Item-mobile">
-          <a href="#" class="hd-Menu_Button"></a>
+          <a href="#" class="hd-Menu_Button mobile-main-nav"></a>
         </div>
         <div class="hd-Header_Item">
           <div class="hd-Logo">
@@ -32,9 +55,9 @@
           <nav class="hd-Nav">
             <ul class="lst-Nav_Items">
               <li class="lst-Nav_Item">
-                <a href="#" class="hd-Nav_Link">Lineup</a>
-                <a href="#" class="hd-Nav_Link">Stages</a>
-                <a href="https://www.musicglue.com/lutonlivespromotions/events/2018-09-28-castlefest-uk-2018-uk-centre-for-carnival-arts" target="_blank" class="hd-Nav_Link">Tickets</a>
+                <a href="#lineup" class="hd-Nav_Link">Lineup</a>
+                <a href="#stages" class="hd-Nav_Link">Stages</a>
+                <a href="#tickets" target="_blank" class="hd-Nav_Link">Tickets</a>
               </li>
             </ul>
           </nav>
@@ -50,16 +73,25 @@
             <div class="car-HeroCarousel_Overlay"></div>
             <img class="car-HeroCarousel_Image" src="img/photo-1.jpg" alt="Castlefest">
             <img class="car-HeroCarousel_Image-mobile" src="img/photo-1-small.jpg" alt="Castlefest">
+            <div class="car-HeroCarousel_Content">
+              <h2 class="car-HeroCarousel_Title">Over 35 bands across 2 stages</h2>
+            </div>
           </div>
-          <div class="car-HeroCarousel_Cell">
+          <div class="car-HeroCarousel_Cell flipped">
             <div class="car-HeroCarousel_Overlay"></div>
             <img class="car-HeroCarousel_Image" src="img/photo-2.jpg" alt="Castlefest">
             <img class="car-HeroCarousel_Image-mobile" src="img/photo-2-small.jpg" alt="Castlefest">
+            <div class="car-HeroCarousel_Content">
+              <h2 class="car-HeroCarousel_Title">Two unique stages across Luton town centre</h2>
+            </div>
           </div>
           <div class="car-HeroCarousel_Cell">
             <div class="car-HeroCarousel_Overlay"></div>
             <img class="car-HeroCarousel_Image" src="img/photo-3.jpg" alt="Castlefest">
             <img class="car-HeroCarousel_Image-mobile" src="img/photo-3-small.jpg" alt="Castlefest">
+            <div class="car-HeroCarousel_Content">
+              <h2 class="car-HeroCarousel_Title">A third sentence about the festival</h2>
+            </div>
           </div>
           <div class="car-HeroCarousel_Cell">
             <div class="car-HeroCarousel_Overlay"></div>
@@ -76,7 +108,7 @@
       </div>
 
       <!-- Lineup -->
-      <div class="sec-Section">
+      <div id="lineup" class="sec-Section">
         <div class="sec-Section_Inner">
           <div class="sec-Section_Body">
 
@@ -90,7 +122,7 @@
       <!-- Lineup End -->
 
       <!-- Stages -->
-      <div class="sec-Section sec-Section-color">
+      <div id="stages" class="sec-Section sec-Section-color">
         <div class="sec-Section_Inner">
           <div class="sec-Section_Header">
             <h2 class="sec-Section_Title">Carnival Arts Centre</h2>
@@ -235,7 +267,7 @@
       <!-- Stages End -->
 
       <!-- Tickets -->
-      <div class="sec-Section">
+      <div id="tickets" class="sec-Section">
         <div class="sec-Section_Inner">
           <div class="sec-Section_Header">
             <h2 class="sec-Section_Title">Get your tickets</h2>
@@ -301,6 +333,7 @@
             <div class="ft-Footer_Item">
               <p class="ft-Footer_Text">For general enquiries please email us at: <a href="mailto:bookings@lutonlives.co.uk
 ">bookings@lutonlives.co.uk</a></p>
+              <p class="ft-Footer_Text">Photos by <a href="https://www.facebook.com/rachaelkingphotography" target="_blank">Rachael King Photography</a></p>
             </div>
 
             <div class="ft-Footer_Item">

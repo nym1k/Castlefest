@@ -8,7 +8,7 @@
 
 body {
   box-sizing: border-box;
-  background: $color-primary-dark;
+  background: $color-dark;
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,10 +17,23 @@ body {
   color: #fff;
   font-size: 16px;
   font-family: 'Nanum Gothic', sans-serif;
+
+  &.drawer-main-menu-open {
+     .drawer {
+       .drawer__overlay {
+         opacity: 1;
+         visibility: visible;
+       }
+
+       .drawer__inner--menu {
+         left: 0;
+       }
+     }
+   }
 }
 
 a {
-  color: currentColor;
+  color: $color-light;
 }
 
 .video {
