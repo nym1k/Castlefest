@@ -114,10 +114,11 @@ img {
 .img-Cover {
   object-fit: cover; }
 
-.img-Grow {
-  transition: transform .3s ease; }
-  .img-Grow:hover {
-    transform: scale(1.05); }
+@media only screen and (min-width: 1200px) {
+  .img-Grow {
+    transition: transform .3s ease; }
+    .img-Grow:hover {
+      transform: scale(1.05); } }
 
 .flickity-button {
   background: none; }

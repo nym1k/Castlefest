@@ -115,11 +115,13 @@ img {
 }
 
 .img-Grow {
-  transition: transform .3s ease;
+  @include breakpoint('lg'){
+    transition: transform .3s ease;
 
-  &:hover {
-    transform: scale(1.05);
-  }
+    &:hover {
+      transform: scale(1.05);
+    }
+  };
 }
 
 // Flickity
