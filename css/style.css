@@ -538,12 +538,8 @@ h6 {
 
 .ft-Footer {
   background-color: #1b1b1b;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-  @media only screen and (min-width: 768px) {
-    .ft-Footer {
-      padding-top: 50px;
-      padding-bottom: 50px; } }
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 .ft-Footer_Inner {
   padding-left: 15px;
@@ -685,12 +681,8 @@ h6 {
   font-family: "BEBAS"; }
 
 .sec-Section {
-  padding-top: 25px;
-  padding-bottom: 25px; }
-  @media only screen and (min-width: 768px) {
-    .sec-Section {
-      padding-top: 50px;
-      padding-bottom: 50px; } }
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 .sec-Section-color {
   background-color: rgba(0, 0, 0, 0.4); }
