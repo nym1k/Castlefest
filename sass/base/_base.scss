@@ -114,6 +114,13 @@ img {
   object-fit: cover;
 }
 
+.img-Grow {
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 
 // Flickity
 

@@ -114,6 +114,11 @@ img {
 .img-Cover {
   object-fit: cover; }
 
+.img-Grow {
+  transition: transform .3s ease; }
+  .img-Grow:hover {
+    transform: scale(1.05); }
+
 .flickity-button {
   background: none; }
   .flickity-button:hover {
@@ -305,6 +310,31 @@ h6 {
       font-size: 60px;
       max-width: 550px; } }
 
+.car-HeroCarousel_Link {
+  margin-top: 30px;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-family: "BEBAS";
+  letter-spacing: 2px;
+  border: 1px solid transparent;
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff; }
+  @media only screen and (min-width: 1200px) {
+    .car-HeroCarousel_Link:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff; } }
+  @media only screen and (min-width: 1200px) {
+    .car-HeroCarousel_Link:hover {
+      background-color: #fff;
+      color: #1b1b1b; } }
+
 .car-InfoTiles::after {
   content: 'flickity';
   display: none; }
@@ -450,8 +480,15 @@ h6 {
     font-weight: 500;
     font-family: "BEBAS";
     letter-spacing: 2px;
+    border: 1px solid transparent;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease;
     border: none;
     margin: 50px auto 0; }
+    @media only screen and (min-width: 1200px) {
+      .row button.btn:hover {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff; } }
 
 .lst-Nav_Items {
   list-style: none; }
@@ -729,7 +766,14 @@ h6 {
   border-radius: 5px;
   font-weight: 500;
   font-family: "BEBAS";
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  border: 1px solid transparent;
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
+  @media only screen and (min-width: 1200px) {
+    .sec-Section_Link:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff; } }
 
 .sec-Lineup {
   max-width: 1024px;
