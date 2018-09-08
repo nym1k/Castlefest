@@ -46,6 +46,22 @@ img {
   height: auto;
 }
 
+.hr {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.hr-color {
+  background: rgba(0,0,0,0.4);
+}
+
+.hr-Bar {
+  width: 50%;
+  height: 2px;
+  background: #fff;
+  margin: 0 auto;
+}
+
 .img-Image {
   position: relative;
 

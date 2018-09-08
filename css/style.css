@@ -64,6 +64,19 @@ img {
   width: 100%;
   height: auto; }
 
+.hr {
+  width: 100%;
+  padding: 20px 0; }
+
+.hr-color {
+  background: rgba(0, 0, 0, 0.4); }
+
+.hr-Bar {
+  width: 50%;
+  height: 2px;
+  background: #fff;
+  margin: 0 auto; }
+
 .img-Image {
   position: relative;
   z-index: 1;
@@ -373,6 +386,70 @@ h6 {
   height: 100%;
   object-fit: contain; }
 
+.ins-Instafeed {
+  display: flex;
+  flex-wrap: wrap; }
+  .ins-Instafeed .col-xs-12.col-sm-3.col-md-3.col-lg-3 {
+    flex: 1;
+    flex-basis: 50%;
+    overflow: hidden; }
+    @media only screen and (min-width: 768px) {
+      .ins-Instafeed .col-xs-12.col-sm-3.col-md-3.col-lg-3 {
+        flex-basis: 25%; } }
+    @media only screen and (min-width: 1200px) {
+      .ins-Instafeed .col-xs-12.col-sm-3.col-md-3.col-lg-3 {
+        flex-basis: calc((100 / 8) * 1%); } }
+  .ins-Instafeed .thumbnail a {
+    position: relative; }
+    .ins-Instafeed .thumbnail a::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%; }
+    .ins-Instafeed .thumbnail a img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; }
+  .ins-Instafeed .thumbnail strong,
+  .ins-Instafeed .thumbnail .likes,
+  .ins-Instafeed .thumbnail .comments {
+    display: none; }
+  .ins-Instafeed .scaling:hover {
+    position: relative;
+    z-index: 2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: transform .3s ease;
+    transition: transform .3s ease;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; }
+    @media only screen and (min-width: 1200px) {
+      .ins-Instafeed .scaling:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); } }
+
+.row {
+  text-align: center; }
+  .row button.btn {
+    appearance: none;
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: "BEBAS";
+    letter-spacing: 2px;
+    border: none;
+    margin: 50px auto 0; }
+
 .lst-Nav_Items {
   list-style: none; }
 
@@ -460,7 +537,7 @@ h6 {
     transition: all 0.5s ease; }
 
 .ft-Footer {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #1b1b1b;
   padding-top: 25px;
   padding-bottom: 25px; }
   @media only screen and (min-width: 768px) {
