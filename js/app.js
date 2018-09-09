@@ -64,7 +64,7 @@ $infotilesCarousel.on( 'dragEnd.flickity', function( event, pointer ) {
   }
 });
 
-var ticketsCarousel = $('.car-Tickets').flickity({
+var $ticketsCarousel = $('.car-Tickets').flickity({
   // options
   cellAlign: 'left',
   contain: true,
