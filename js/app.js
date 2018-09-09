@@ -24,7 +24,8 @@ var $heroCarousel = $('.car-HeroCarousel').flickity({
   // options
   cellAlign: 'left',
   contain: true,
-  wrapAround: true
+  wrapAround: true,
+  imagesLoaded: true
 });
 
 $heroCarousel.on( 'dragStart.flickity', function( event, pointer ) {
