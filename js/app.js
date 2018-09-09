@@ -40,7 +40,7 @@ $heroCarousel.on( 'dragEnd.flickity', function( event, pointer ) {
   }
 });
 
-var infotilesCarousel = $('.car-InfoTiles').flickity({
+var $infotilesCarousel = $('.car-InfoTiles').flickity({
   // options
   cellAlign: 'left',
   contain: true,
