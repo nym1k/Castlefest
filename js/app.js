@@ -20,14 +20,26 @@ function debounce (func, wait, immediate) {
   }
 }
 
-$('.car-HeroCarousel').flickity({
+var $heroCarousel = $('.car-HeroCarousel').flickity({
   // options
   cellAlign: 'left',
   contain: true,
   wrapAround: true
 });
 
-$('.car-InfoTiles').flickity({
+$heroCarousel.on( 'dragStart.flickity', function( event, pointer ) {
+  document.ontouchmove = function (e) {
+    e.preventDefault();
+  }
+});
+
+$heroCarousel.on( 'dragEnd.flickity', function( event, pointer ) {
+  document.ontouchmove = function (e) {
+    return true;
+  }
+});
+
+var infotilesCarousel = $('.car-InfoTiles').flickity({
   // options
   cellAlign: 'left',
   contain: true,
@@ -38,7 +50,20 @@ $('.car-InfoTiles').flickity({
   watchCSS: true
 });
 
-$('.car-Tickets').flickity({
+
+$infotilesCarousel.on( 'dragStart.flickity', function( event, pointer ) {
+  document.ontouchmove = function (e) {
+    e.preventDefault();
+  }
+});
+
+$infotilesCarousel.on( 'dragEnd.flickity', function( event, pointer ) {
+  document.ontouchmove = function (e) {
+    return true;
+  }
+});
+
+var ticketsCarousel = $('.car-Tickets').flickity({
   // options
   cellAlign: 'left',
   contain: true,
@@ -47,6 +72,19 @@ $('.car-Tickets').flickity({
   prevNextButtons: false,
   wrapAround: true,
   watchCSS: true
+});
+
+
+$ticketsCarousel.on( 'dragStart.flickity', function( event, pointer ) {
+  document.ontouchmove = function (e) {
+    e.preventDefault();
+  }
+});
+
+$ticketsCarousel.on( 'dragEnd.flickity', function( event, pointer ) {
+  document.ontouchmove = function (e) {
+    return true;
+  }
 });
 
 function drawerPanels() {
